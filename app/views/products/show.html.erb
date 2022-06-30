@@ -10,12 +10,13 @@
       <p><%= @product.description %></p>
       <div class="quantity">
         <span><%= @product.quantity %> in stock at </span>
-        <span><%= @product.price %></span>
+        <span><%= "$#{@product.price}" %></span>
       </div>
       <div class="price">    
       
       <% if @product.quantity == 0 %>
-      <button type="button" class="btn btn-secondary btn-lg" disabled>Sold Out</button>
+      <button type="button" class="soldout" disabled>Sold Out</button>
+      
      <% else %>
 
         <%= button_to add_item_cart_path(product_id: @product.id), class: 'btn' , method: :post do %>
