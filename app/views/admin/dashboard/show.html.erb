@@ -1,2 +1,14 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<br/>
+<h1>Hello, Admin</h1>
+<br/>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+  <h3> Store stats: </h3>
+  <p> Here are the number of categories currently in the database: <%= @category %> </p>
+
+  <p> Here are the number of <%= link_to "products", admin_products_path %>  in the database: <%= @products %> </p>
+  </div>
+</div>
+
+
+
