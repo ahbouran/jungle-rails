@@ -13,9 +13,10 @@ Rails.application.routes.draw do
 
   get '/register' => "users#new"
   post '/register' => "users#create"
-  get '/login' => "session#new"
-  post '/login' => "session#create"
-  get '/logout' => "session#destroy"
+
+  get '/login' => "sessions#new"
+  post '/login' => "sessions#create"
+  get '/logout' => "sessions#destroy"
 
 
   resources :orders, only: [:create, :show]
