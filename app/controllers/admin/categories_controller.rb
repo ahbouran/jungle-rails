@@ -3,6 +3,7 @@ class Admin::CategoriesController < ApplicationController
                                 password: ENV["ADMIN_PASSWORD"]
   def index
     @categories = Category.pluck(:name)
+
   end
 
   def new
