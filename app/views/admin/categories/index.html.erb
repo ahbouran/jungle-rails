@@ -1,0 +1,17 @@
+<br/>
+<h1> List of Categories: </h1>
+
+<div>
+<br/>
+
+<div class="well">
+<%= link_to '+ New Categroy', [:new, :admin, :category], class: 'btn btn-info' %>
+</div>
+
+<% @categories.each do |category| %>
+  <ul class="list-group">  
+     <li class="list-group-item"><%= category %></li>
+    </ul>
+
+<% end %>
+</div>
