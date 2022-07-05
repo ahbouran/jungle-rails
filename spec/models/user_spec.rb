@@ -31,7 +31,10 @@ RSpec.describe User, type: :model do
   end
 
   describe '.authenticate_with_credentials' do 
-    it "should authenticate even with white space around email"
+    
+    it "should authenticate even with white space around email" do
+      expect(authenticate_with_credentials(' Bob@test.com ', 'bob12345')).to be_valid
+    end
     it "should accept when a user types in the wrong case"
   end
 
